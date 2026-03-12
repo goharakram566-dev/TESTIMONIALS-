@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Testimonials</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background: #f4f7f6; padding: 50px 20px; }
+        .header { text-align: center; margin-bottom: 50px; }
+        .header h2 { color: #764ba2; }
+        
+        /* Responsive Grid & Card Styling */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .testimonial-card:hover { transform: translateY(-10px); }
+        .user-info { display: flex; align-items: center; gap: 15px; margin-top: 15px; }
+        .user-info img { width: 50px; height: 50px; border-radius: 50%; }
+        .stars { color: #ffcc00; }
+    </style>
+</head>
+<body>
+    <div class="header"><h2>What Our Clients Say</h2></div>
+    <div class="testimonial-grid">
+        <!-- Add cards here, following the structure above -->
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Excellent service and fast support!"</p>
+            <div class="user-info">
+                <img src="avatar1.jpg" alt="User">
+                <div><h4>Name</h4><span>Title</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
