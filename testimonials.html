@@ -3,46 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Testimonials</title>
+    <title>Modern Testimonials</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
-        body { background: #f4f7f6; padding: 50px 20px; }
-        .header { text-align: center; margin-bottom: 50px; }
-        .header h2 { color: #764ba2; }
-        
-        /* Responsive Grid & Card Styling */
-        .testimonial-grid {
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+
+        body {
+            background: #0f172a; /* Deep dark blue background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px 20px;
+            min-height: 100vh;
+        }
+
+        .title {
+            color: #fff;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .title h1 { font-size: 2.5rem; letter-spacing: 1px; }
+        .title p { color: #94a3b8; margin-top: 10px; }
+
+        /* The Grid */
+        .testimonial-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 1100px;
+            width: 100%;
         }
-        .testimonial-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+
+        /* Glass Card Effect */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px); /* The "Glass" blur */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 24px;
+            position: relative;
+            transition: 0.4s ease;
         }
-        .testimonial-card:hover { transform: translateY(-10px); }
-        .user-info { display: flex; align-items: center; gap: 15px; margin-top: 15px; }
-        .user-info img { width: 50px; height: 50px; border-radius: 50%; }
-        .stars { color: #ffcc00; }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #38bdf8; /* Light blue glow on hover */
+        }
+
+        /* Quote Icon */
+        .card::before {
+            content: "\201C";
+            position: absolute;
+            top: 10px;
+            right: 30px;
+            font-size: 80px;
+            color: rgba(56, 189, 248, 0.2);
+        }
+
+        .testimonial-text {
+            color: #cbd5e1;
+            line-height: 1.7;
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .profile img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #38bdf8;
+        }
+
+        .profile-info h3 {
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .profile-info span {
+            color: #38bdf8;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
     </style>
 </head>
 <body>
-    <div class="header"><h2>What Our Clients Say</h2></div>
-    <div class="testimonial-grid">
-        <!-- Add cards here, following the structure above -->
-        <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p>"Excellent service and fast support!"</p>
-            <div class="user-info">
-                <img src="avatar1.jpg" alt="User">
-                <div><h4>Name</h4><span>Title</span></div>
+
+    <div class="title">
+        <h1>User Reviews</h1>
+        <p>What the community is saying about us</p>
+    </div>
+
+    <div class="testimonial-container">
+        
+        <!-- Card 1 -->
+        <div class="card">
+            <p class="testimonial-text">"The interface is incredibly intuitive. I was able to set up my entire project in under 10 minutes. Highly recommended for developers!"</p>
+            <div class="profile">
+                <img src="https://i.pravatar.cc" alt="User">
+                <div class="profile-info">
+                    <h3>Alex Rivera</h3>
+                    <span>Senior Developer</span>
+                </div>
             </div>
         </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <p class="testimonial-text">"Finally a tool that focuses on clean aesthetics without sacrificing power. The support team is also world-class."</p>
+            <div class="profile">
+                <img src="https://i.pravatar.cc" alt="User">
+                <div class="profile-info">
+                    <h3>Sarah Jenkins</h3>
+                    <span>UI/UX Designer</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <p class="testimonial-text">"Switching to this platform was the best decision for our team. The automation features saved us nearly 20 hours a week."</p>
+            <div class="profile">
+                <img src="https://i.pravatar.cc" alt="User">
+                <div class="profile-info">
+                    <h3>Marcus Thorne</h3>
+                    <span>Project Manager</span>
+                </div>
+            </div>
+        </div>
+
     </div>
+
 </body>
 </html>
